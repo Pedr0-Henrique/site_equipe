@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>Kenneth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="/">-Kenneth-</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="../../index.html">Início</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="about-menu">
+      <ul class="about-nav-list">
+        <li><a href="#" data-target="about-menu">Sobre</a></li>
+      </ul>
+      <div class="about-content active">
+        <p>Me chamo Kenneth, tenho 19 anos e estou cursando ADS(Analise e Desenvolvimento de Sistemas) na Faculdade Senac DF.</p>
+      </div>
+    </div>
+
+
+
+    <div class="about-menu-projetos active">
+      <ul class="about-nav-list-projetos">
+        <li><a href="#" data-target="about-menu-projetos">Projetos</a></li>
+      </ul>
+
+      <div class="about-content-projetos active">
+        <p>Tenho como objetivos de criar projetos como, sites personalizados, rôbos operadores para Day Trade e criar jogos para navegadores ou para plataformas de jogos.</p>
+      </div>
+
+    </div>
+
+    <div class="about-menu-contato">
+      <ul class="about-nav-list-contato">
+        <li><a href="#" data-target="about-menu-contato">Contato</a></li>
+      </ul>
+      <div class="about-content-contato active">
+        <div><img class="whatsapplogo" src="img/whatsappLogo.png" alt="logowhatsapp"></div>
+
+        <div>
+          <p class="whatsappNumber">+55 (61)99694-3538.</p>
+        </div>
+
+
+        <div><img class="instagramlogo" src="img/InstagramLogo.png" alt="logoinstagram"></div>
+
+        <div>
+          <p class="instagramName">kenesu_training.</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    
+  </header>
+
+  <main>
+
+    <section>
+      <div class="ContainerPerfil">
+        <img class="Perfil" src="img/perfilKenneth.jpg" alt="">
+
+      </div>
+    </section>
+
+  </main>
+  <script src="mobile-navbar.js"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const aboutLink = document.querySelector(".nav-list li:first-child a");
+  const projectsLink = document.querySelector(".nav-list li:nth-child(2) a");
+  const contactLink = document.querySelector(".nav-list li:nth-child(3) a");
+  const aboutMenu = document.querySelector(".about-menu");
+  const projectsMenu = document.querySelector(".about-menu-projetos");
+  const contactMenu = document.querySelector(".about-menu-contato");
+  const aboutContent = document.querySelector(".about-content");
+  const projectsContent = document.querySelector(".about-content-projetos");
+  const contactContent = document.querySelector(".about-content-contato");
+
+  let isAboutMenuOpen = false;
+  let isProjectsMenuOpen = false;
+  let isContactMenuOpen = false;
+
+  aboutLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!isAboutMenuOpen) {
+      closeAllMenus();
+      aboutMenu.style.left = "0";
+      aboutContent.style.display = "block";
+      isAboutMenuOpen = true;
+    } else {
+      aboutMenu.style.left = "-300px";
+      aboutContent.style.display = "none";
+      isAboutMenuOpen = false;
+    }
+  });
+
+  projectsLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!isProjectsMenuOpen) {
+      closeAllMenus();
+      projectsMenu.style.left = "0";
+      projectsContent.style.display = "block";
+      isProjectsMenuOpen = true;
+    } else {
+      projectsMenu.style.left = "-300px";
+      projectsContent.style.display = "none";
+      isProjectsMenuOpen = false;
+    }
+  });
+
+  contactLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!isContactMenuOpen) {
+      closeAllMenus();
+      contactMenu.style.left = "0";
+      contactContent.style.display = "block";
+      isContactMenuOpen = true;
+    } else {
+      contactMenu.style.left = "-300px";
+      contactContent.style.display = "none";
+      isContactMenuOpen = false;
+    }
+  });
+
+  function closeAllMenus() {
+    aboutMenu.style.left = "-300px";
+    aboutContent.style.display = "none";
+    isAboutMenuOpen = false;
+    projectsMenu.style.left = "-300px";
+    projectsContent.style.display = "none";
+    isProjectsMenuOpen = false;
+    contactMenu.style.left = "-300px";
+    contactContent.style.display = "none";
+    isContactMenuOpen = false;
+  }
+});
+  </script>
+
+
+
+</body>
+
+</html>

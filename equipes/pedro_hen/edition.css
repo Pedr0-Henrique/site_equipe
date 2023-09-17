@@ -1,0 +1,128 @@
+*{
+    padding:0px;
+    margin:0px;
+    
+    
+}
+
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: 100%;
+    background-image: url(imagens/asus-rog-3840x2160-14058.jpg)
+    
+  }
+  main{
+    flex: 1 1 0;
+  }
+
+/*Menu*/
+.menu{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    background-image: -webkit-linear-gradient(120deg, #2a85e5, #070A52);
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    border-bottom: 4px solid rgb(214, 213, 213);
+}
+.menu ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+    gap: 10px;
+    padding: 0 40px 0 0;
+}
+.menu a{
+    text-decoration: none;
+    color:  #ffffff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*conteudo da pagina*/
+.TituloPrincipal{
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+   margin: 360px;
+}
+/*objetos*/
+.container-objeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 100px 0 0 0;
+}
+
+.objeto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.img-objeto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid rgb(232, 232, 232);
+    box-shadow: 4px 4px 30px rgb(114, 114, 114);
+}
+
+.img-objeto:hover {
+    scale: 1.06;
+    transition: 0, 5s;
+}
+
+.container-objeto h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+
+}
+/*rodape*/
+.Container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 150px;
+    background-image: -webkit-linear-gradient(120deg,#2a85e5,#00449a);
+    gap: 10px;
+  }
+  .Container-icone{
+   
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+  }
+  .Container-icone a{
+    color: #e9e9e9;
+    text-decoration: none;
+  }
+  .img-footer{
+    width: 40px;
+    height: 40px;
+  
+  }
+  .footer{
+    margin-top: 140px;
+  }

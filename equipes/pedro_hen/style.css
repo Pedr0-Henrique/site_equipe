@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu ul {
+  background-image: -webkit-linear-gradient(120deg, rgb(3, 229, 180), rgb(2, 132, 184));
+  border-radius: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.menu li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  list-style-type: none;
+  color: #fff;
+}
+
+.ContainerPerfil {
+  justify-content: center;
+  display: flex;
+  margin-top: 40px;
+
+
+
+}
+
+.Perfil {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 5px solid #080079;
+
+}
+
+.tituloSobreMim {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  margin-top: 40px;
+
+
+}
+
+.paragrafoSobreMim {
+  margin-left: 200px;
+  margin-right: 200px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.sobreMim {
+  margin-bottom: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui;
+  background: #ffffff;
+}
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 1em;
+}
+
+.container {
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 2em;
+  background: rgba(0, 0, 0, .1)
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, .5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1)
+}
+
+
+.card:nth-of-type(1) .image-container {
+  background-image: url("https://escolauniversalcursosead.com.br/wp-content/uploads/2019/12/Logica-de-Programacao.jpg");
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://files.passeidireto.com/2e98b123-6dd1-4686-9052-99be3aacfd46/bg1.png")
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-conceitual-da-matem%C3%A1tica-computacional-utiliza%C3%A7%C3%A3o-de-m%C3%A9todos-num%C3%A9ricos-e-computacionais-para-resolver-271107116.jpg")
+}
+
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://www.keycdn.com/img/blog/web-standards.png")
+}
+
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://i.ytimg.com/vi/PatxmogMiv4/maxresdefault.jpg")
+}
+
+
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0, 0, 0, .1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0, 0, 0, .3);
+  text-align: center;
+  color: white;
+  border-radius: .2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2))
+}
+
+h2 a {
+  color: #f5b916
+}
+
+/*rodape*/
+.Container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 150px;
+  background-image: -webkit-linear-gradient(120deg, rgb(3, 229, 180), rgb(2, 132, 184));
+  gap: 10px;
+}
+
+.Container-icone {
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Container-icone a {
+  color: #e9e9e9;
+  text-decoration: none;
+}
+
+.img-footer {
+  width: 40px;
+  height: 40px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: white;
+  --primary: #ff1ead;
+  --secondary: #1effc3;
+  --card-size: 300px;
+}
+
+.card {
+  width: calc(var(--card-size) * 1.586);
+  height: var(--card-size);
+  border-radius: 0.75rem;
+  box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  background: black;
+  display: grid;
+  grid-template-columns: 40% auto;
+  color: white;
+  align-items: center;
+  margin-left: 409px;
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 32px 80px 14px rgba(0, 0, 0, 0.36), 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-details {
+  padding: 1rem;
+}
+
+.name {
+  font-size: 1.25rem;
+}
+
+.occupation {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card-avatar {
+  display: grid;
+  place-items: center;
+}
+
+svg {
+  fill: white;
+  width: 65%;
+}
+
+.card-about {
+  margin-top: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.item .value {
+  font-size: 1rem;
+}
+
+.item .label {
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+}
+
+.skills .label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.skills .value {
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}

@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+}
+
+main {
+  background: url("img/wallpaperflare.com_wallpaper.jpg") no-repeat center center;
+  background-size: cover;
+  height: 92vh;
+
+}
+
+.ContainerPerfil {
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.Perfil {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border: 5px solid #23232e;
+  position: absolute;
+  top: 10pc;
+
+}
+
+.ContainerPerfil.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.Perfil.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.ContainerPerfil, .Perfil {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 9999px) {
+  body {
+    overflow-x: hidden;
+    overflow: hidden;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 30vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+
+  .about-content.active,
+  .about-content-projetos.active,
+  .about-content-contato.active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+
+}
+
+
+
+.about-menu {
+
+  position: fixed;
+  top: 8%;
+  left: -300px;
+  width: 17%;
+  max-width: 300%;
+  height: 100vh;
+  background: #23232e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease-in;
+
+}
+
+.about-nav-list {
+  
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.about-nav-list li {
+  transition: 0.3s ease-in-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+
+.about-content {
+  
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  display: none;
+}
+
+
+
+/* Seu CSS existente */
+
+.about-menu-projetos,
+.about-menu-contato {
+  box-sizing: border-box;
+  position: fixed;
+  top: 72px;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background: #23232e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease-in;
+}
+
+.about-nav-list-projetos,
+.about-nav-list-contato {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.about-nav-list-projetos li,
+.about-nav-list-contato li {
+  transition: 0.3s ease-in-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.about-content-projetos,
+.about-content-contato {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  display: none;
+}
+
+
+.whatsapplogo {
+  width: 90px;
+  height: 90px;
+}
+
+.instagramlogo {
+  width: 90px;
+  height: 90px;
+}
